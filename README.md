@@ -7,7 +7,6 @@ GLSG(opengl simple graphics)
 
 ** only if not defined GLSG_NDEBUG.
 - cstdio
-- cassert
 
 ** This project is designed to learn opengl.
 
