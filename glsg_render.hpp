@@ -51,18 +51,12 @@ public:
     clear(uint32_t _flag)
     { glClear(_flag); }
 
-	inline void 
+    inline void 
     set_clear_color(float _r, float _g, float _b, float _a)
     { glClearColor(_r, _g, _b, _a); }
     inline void
     set_viewport(int _x, int _y, int _w, int _h)
     { glViewport(_x, _y, _w, _h); }
-public:
-	render_t()
-        : m_shader(0)
-	{}
-	~render_t()
-	{}
 };
 
 
