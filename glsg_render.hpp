@@ -33,11 +33,11 @@ public:
     { gladLoadGL(); }
 
     inline static void
-	enable(int32_t _gldef)
-	{ glEnable(_gldef); }
+    enable(int32_t _gldef)
+    { glEnable(_gldef); }
     inline static void
-	disable(int32_t _gldef)
-	{ glDisable(_gldef); }
+    disable(int32_t _gldef)
+    { glDisable(_gldef); }
 
 public:
     inline void
