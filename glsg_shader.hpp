@@ -100,7 +100,7 @@ public:
 
 public:
 	shader_t()
-		: m_id(0)
+		: m_id(NULL)
 	{ create(); }
 	~shader_t()
 	{ destroy(); }
