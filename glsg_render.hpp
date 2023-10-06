@@ -25,39 +25,34 @@ enum class draw_mode
     , PATCHES = GL_PATCHES
 };
 
-class render_t
+inline static void
+gl_load()
+{ gladLoadGL(); }
+
+inline static void
+enable(int32_t _gldef)
+{ glEnable(_gldef); }
+inline static void
+disable(int32_t _gldef)
+{ glDisable(_gldef); }
+
+inline void
+draw(mesh_t* _mesh, draw_mode _mode)
 {
-public:
-    inline static void
-    gl_load()
-    { gladLoadGL(); }
+    _mesh->bind();
+    glDrawElements((GLenum)_mode, _mesh->sizeof_EBO(), GL_UNSIGNED_INT, NULL);
+}
 
-    inline static void
-    enable(int32_t _gldef)
-    { glEnable(_gldef); }
-    inline static void
-    disable(int32_t _gldef)
-    { glDisable(_gldef); }
+inline void
+clear(uint32_t _flag)
+{ glClear(_flag); }
 
-public:
-    inline void
-    draw(mesh_t* _mesh, draw_mode _mode)
-    {
-        _mesh->bind();
-        glDrawElements((GLenum)_mode, _mesh->sizeof_EBO(), GL_UNSIGNED_INT, NULL);
-    }
-
-    inline void
-    clear(uint32_t _flag)
-    { glClear(_flag); }
-
-    inline void 
-    set_clear_color(float _r, float _g, float _b, float _a)
-    { glClearColor(_r, _g, _b, _a); }
-    inline void
-    set_viewport(int _x, int _y, int _w, int _h)
-    { glViewport(_x, _y, _w, _h); }
-};
+inline void 
+set_clear_color(float _r, float _g, float _b, float _a)
+{ glClearColor(_r, _g, _b, _a); }
+inline void
+set_viewport(int _x, int _y, int _w, int _h)
+{ glViewport(_x, _y, _w, _h); }
 
 
 
