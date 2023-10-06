@@ -28,9 +28,9 @@ private:
 	int 
 	_check_shader_log(GLuint _shader) 
 	{
-		int		len			= 0;
-		int		chWrittn	= 0;
-		char*	log;
+		int len		= 0;
+		int chWrittn	= 0;
+		char* log;
 		glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &len);
 		if (0 < len) 
 		{
@@ -46,9 +46,9 @@ private:
 	int 
 	_check_program_log(GLuint _prog)
 	{
-		int		len			= 0;
-		int		chWrittn	= 0;
-		char*	log;
+		int len		= 0;
+		int chWrittn	= 0;
+		char* log;
 		glGetProgramiv(_prog, GL_INFO_LOG_LENGTH, &len);
 		if (0 < len) 
 		{
