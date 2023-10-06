@@ -13,6 +13,4 @@
 
 #include "glsg_debug.hpp"
 
-
-
 #endif
