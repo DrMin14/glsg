@@ -39,9 +39,6 @@ public:
 	disable(int32_t _gldef)
 	{ glDisable(_gldef); }
 
-private:
-	GLuint m_shader;
-
 public:
     inline void
     draw(mesh_t* _mesh, draw_mode _mode)
