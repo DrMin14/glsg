@@ -25,14 +25,14 @@ enum class draw_mode
     , PATCHES = GL_PATCHES
 };
 
-inline static void
+inline void
 gl_load()
 { gladLoadGL(); }
 
-inline static void
+inline void
 enable(int32_t _gldef)
 { glEnable(_gldef); }
-inline static void
+inline void
 disable(int32_t _gldef)
 { glDisable(_gldef); }
 
