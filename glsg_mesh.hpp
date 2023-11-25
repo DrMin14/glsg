@@ -51,9 +51,9 @@ public:
 		glGenBuffers		(1, &m_EBO);
 		glBindVertexArray	(m_VAO);
 		glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(float) * _vertices_size, _vertices, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, _vertices_size, _vertices, GL_STATIC_DRAW);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint32_t) * _indices_size, _indices, GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, _indices_size, _indices, GL_STATIC_DRAW);
 		glBindVertexArray(NULL);
 	}
 	~mesh_t()
